@@ -1,5 +1,6 @@
 const lightCodeTheme = require("prism-react-renderer/themes/github");
 const darkCodeTheme = require("prism-react-renderer/themes/dracula");
+const CardLink = require("./src/remark/CardLink");
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
@@ -83,6 +84,7 @@ module.exports = {
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
           editUrl: "https://github.com/connext/documentation",
+          remarkPlugins: [CardLink]
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
